@@ -35,3 +35,43 @@
   background: #7a34db;
   background: linear-gradient(51deg, #ffea00 0%, rgba(122, 52, 219, 1) 100%);
 }
+
+.commonCustomCard {
+  border-radius: 20px;
+  border-top: 5px solid #ffea00;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 234, 0, 0.3) 0%,
+    rgba(122, 52, 219, 0.3) 100%
+  );
+  box-shadow: 0 0 8px 0 rgba(245, 158, 11, 0.32);
+  max-width: 461px;
+}
+.nr_customBg {
+  border-radius: 9.556px;
+  background: rgba(245, 158, 11, 0.2);
+}
+.nr_customPrice {
+  color: rgba(255, 215, 0, 1);
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.nr-customBorder::after {
+  background: linear-gradient(90deg, #ffea00 0%, #7a34db 100%);
+}
+.nrCustomBgDeposite {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.nr_customInputBox {
+  padding: 22px 24px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+}
+
+.nr-customButton {
+  border-radius: 80px;
+  border: 1px solid #7a34db;
+  background: linear-gradient(90deg, #ffea00 0%, #7a34db 100%);
+}
