@@ -5,6 +5,7 @@ import DashboardLayout from "../layouts/DashboardLayout";
 
 // Pages
 import DashboardHome from "../pages/Dashboard/DashboardHome";
+import DashboardMatchQueue from "@/pages/Dashboard/DashboardMatchQueue";
 
 const Router = createBrowserRouter([
   // Error Route
@@ -51,6 +52,10 @@ const Router = createBrowserRouter([
       {
         path: "settings",
         element: <h1>Settings</h1>,
+      },
+      {
+        path: "match-queue",
+        element: <DashboardMatchQueue />,
       },
     ],
   },
