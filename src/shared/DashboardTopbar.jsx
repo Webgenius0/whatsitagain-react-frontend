@@ -5,15 +5,18 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Avatar from "@/assets/images/avatar.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import DropdownArrowSVG from "@/assets/SVG/DropdownArrowSVG";
 
 export default function DashboardTopbar() {
+  // Getting the page name
+  const PageName = useLocation().pathname.split("/").pop();
+
   return (
     <div className="w-full h-full shadow shadow-[#8F67C7] flex items-center justify-between px-8">
       <div>
-        <h2 className="text-white text-3xl font-semibold font-exo">
-          Dashboard
+        <h2 className="text-white text-3xl font-semibold font-exo capitalize">
+          {PageName.split("-").join(" ")}
         </h2>
       </div>
 

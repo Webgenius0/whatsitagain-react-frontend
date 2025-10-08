@@ -5,6 +5,8 @@ import DashboardLayout from "../layouts/DashboardLayout";
 
 // Pages
 import DashboardHome from "../pages/Dashboard/DashboardHome";
+import DashboardWallet from "@/pages/Dashboard/DashboardWallet";
+import DashboardMatchQueue from "@/pages/Dashboard/DashboardMatchQueue";
 
 const Router = createBrowserRouter([
   // Error Route
@@ -34,7 +36,7 @@ const Router = createBrowserRouter([
       },
       {
         path: "wallet",
-        element: <h1>Wallet</h1>,
+        element: <DashboardWallet />,
       },
       {
         path: "bet-ledger",
@@ -51,6 +53,10 @@ const Router = createBrowserRouter([
       {
         path: "settings",
         element: <h1>Settings</h1>,
+      },
+      {
+        path: "match-queue",
+        element: <DashboardMatchQueue />,
       },
     ],
   },
