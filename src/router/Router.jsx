@@ -5,6 +5,7 @@ import DashboardLayout from "../layouts/DashboardLayout";
 
 // Pages
 import DashboardHome from "../pages/Dashboard/DashboardHome";
+import DashboardWallet from "@/pages/Dashboard/DashboardWallet";
 import DashboardMatchQueue from "@/pages/Dashboard/DashboardMatchQueue";
 
 const Router = createBrowserRouter([
@@ -35,7 +36,7 @@ const Router = createBrowserRouter([
       },
       {
         path: "wallet",
-        element: <h1>Wallet</h1>,
+        element: <DashboardWallet />,
       },
       {
         path: "bet-ledger",
