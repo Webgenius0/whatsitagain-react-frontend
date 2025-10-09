@@ -2,8 +2,11 @@ import ArrowBlackIconSVG from "@/assets/SVG/ArrowBlackIconSVG";
 import ArrowYelloIconSVG from "@/assets/SVG/ArrowYelloIconSVG";
 import CreateNewMatchIconSVG from "@/assets/SVG/CreateNewMatchIconSVG";
 import FundWillBeIconSVG from "@/assets/SVG/FundWillBeIconSVG";
+import MatchModeInputIconSVG from "@/assets/SVG/MatchModeInputIconSVG";
 import MatchTimeInputIconSVG from "@/assets/SVG/MatchTimeInputIconSVG";
+import MaxPlayerInputIconSVG from "@/assets/SVG/MaxPlayerInputIconSVG";
 import WinningAmountIconSVG from "@/assets/SVG/WinningAmountIconSVG";
+import SelectBox from "@/components/Common/SelectBox";
 import React from "react";
 import { useForm } from "react-hook-form";
 
@@ -21,7 +24,7 @@ export default function DashboardCreateMatch() {
   };
 
   return (
-    <section className="w-full h-full relative z-1 bg-gradient-to-r from-indigo-950/80 to-indigo-700/80 p-8 flex items-center justify-center">
+    <section className="w-full h-full relative z-1 bg-gradient-to-r from-indigo-950/80 to-indigo-700/80 p-8 flex items-center justify-center overflow-y-scroll">
       <div className="w-full max-w-[1000px] p-[60px] text-center bg-gradient-to-l from-yellow-400/20 to-violet-700/20 rounded-2xl">
         <div className="w-full flex items-center justify-center gap-5">
           <div className="w-[30px]">
@@ -50,6 +53,30 @@ export default function DashboardCreateMatch() {
                 errors.title ? "border border-red-500" : ""
               }`}
             />
+          </div>
+
+          <div className="w-full grid grid-cols-2 gap-6">
+            <div className="w-full text-left flex flex-col gap-3">
+              <label className="text-white text-xl font-semibold font-exo flex items-center gap-2">
+                <div className="w-[20px]">
+                  <MatchModeInputIconSVG />
+                </div>{" "}
+                Match Mode
+              </label>
+
+              <SelectBox title={"Select Mode"} selectItems={["Squad", "Duo"]} />
+            </div>
+
+            <div className="w-full text-left flex flex-col gap-3">
+              <label className="text-white text-xl font-semibold font-exo flex items-center gap-2">
+                <div className="w-[20px]">
+                  <MaxPlayerInputIconSVG />
+                </div>{" "}
+                Max Player
+              </label>
+
+              <SelectBox title={"Select Mode"} selectItems={["2", "3", "4"]} />
+            </div>
           </div>
 
           <div className="w-full grid grid-cols-2 gap-6">
@@ -128,6 +155,19 @@ export default function DashboardCreateMatch() {
               <p className="text-white text-base font-exo">
                 Funds will be held until the match completion
               </p>
+            </div>
+          </div>
+
+          <div className="w-full grid grid-cols-1 gap-6">
+            <div className="w-full text-left flex flex-col gap-3">
+              <label className="text-white text-xl font-semibold font-exo">
+                Select requirement
+              </label>
+
+              <SelectBox
+                title={"Select requirement"}
+                selectItems={["1", "2", "3", "4", "5", "6", "7", "8", "9"]}
+              />
             </div>
           </div>
 
