@@ -8,6 +8,8 @@ import DashboardHome from "../pages/Dashboard/DashboardHome";
 import DashboardWallet from "@/pages/Dashboard/DashboardWallet";
 import DashboardMatchQueue from "@/pages/Dashboard/DashboardMatchQueue";
 import DashboardCreateMatch from "@/pages/Dashboard/DashboardCreateMatch";
+import DashboardMatchLobby from "@/pages/Dashboard/DashboardMatchLobby";
+import DashboardBet from "@/pages/Dashboard/DashboardBet";
 
 const Router = createBrowserRouter([
   // Error Route
@@ -62,6 +64,14 @@ const Router = createBrowserRouter([
       {
         path: "create-match",
         element: <DashboardCreateMatch />,
+      },
+      {
+        path: "match-lobby",
+        element: <DashboardMatchLobby />,
+      },
+      {
+        path: "bet",
+        element: <DashboardBet />,
       },
     ],
   },

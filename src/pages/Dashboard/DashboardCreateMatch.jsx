@@ -32,7 +32,7 @@ export default function DashboardCreateMatch() {
   };
 
   return (
-    <section className="w-full h-full relative z-1 bg-gradient-to-r from-indigo-950/80 to-indigo-700/80 p-8 flex items-center justify-center">
+    <section className="w-full h-full relative z-1 p-8 flex items-center justify-center">
       <div className="w-full h-auto max-h-full max-w-[1000px] p-[60px] text-center bg-gradient-to-l from-yellow-400/20 to-violet-700/20 rounded-2xl overflow-y-scroll custom-scrollbar">
         <div className="w-full flex items-center justify-center gap-5">
           <div className="w-[30px]">
