@@ -17,6 +17,7 @@ import AuthVerified from "@/pages/Auth/AuthVerified";
 import DashboardMatchLobby from "@/pages/Dashboard/DashboardMatchLobby";
 import DashboardBet from "@/pages/Dashboard/DashboardBet";
 import DashboardMatchResult from "@/pages/Dashboard/DashboardMatchResult";
+import AllPages from "@/pages/AllPages";
 
 const Router = createBrowserRouter([
   // Error Route
@@ -29,10 +30,14 @@ const Router = createBrowserRouter([
     ),
   },
 
-  // Auth Route
+  // Basic Route
   {
     path: "/",
-    element: <>Hello World</>,
+    element: <AllPages />,
+  },
+  {
+    path: "/all-pages",
+    element: <AllPages />,
   },
 
   // Dashboard Layout Route
@@ -109,7 +114,7 @@ const Router = createBrowserRouter([
       },
       {
         path: "verified-success",
-        element:<AuthVerified/>,
+        element: <AuthVerified />,
       },
     ],
   },
