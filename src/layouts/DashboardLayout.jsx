@@ -14,7 +14,7 @@ export default function DashboardLayout() {
           <DashboardTOpbar />
         </div>
 
-        <div className="w-full h-[calc(100vh-80px)] overflow-y-scroll custom-scrollbar">
+        <div className="w-full h-[calc(100vh-80px)] overflow-y-scroll custom-scrollbar bg-gradient-to-r from-indigo-950/80 to-indigo-700/80">
           <Outlet />
         </div>
       </div>

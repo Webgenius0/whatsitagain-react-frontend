@@ -19,6 +19,7 @@ export default function ActiveMatchesOverview() {
       playersCount: "5/10",
       matchDuration: "15 min",
       joinButtonText: "Join Match",
+      isFull: false,
     },
     {
       matchTitle: "Gold + Ranked Showdown",
@@ -30,6 +31,7 @@ export default function ActiveMatchesOverview() {
       playersCount: "5/10",
       matchDuration: "15 min",
       joinButtonText: "Join Match",
+      isFull: true,
     },
     {
       matchTitle: "Gold + Ranked Showdown",
@@ -41,6 +43,7 @@ export default function ActiveMatchesOverview() {
       playersCount: "5/10",
       matchDuration: "15 min",
       joinButtonText: "Join Match",
+      isFull: false,
     },
     {
       matchTitle: "Gold + Ranked Showdown",
@@ -52,6 +55,7 @@ export default function ActiveMatchesOverview() {
       playersCount: "5/10",
       matchDuration: "15 min",
       joinButtonText: "Join Match",
+      isFull: true,
     },
     {
       matchTitle: "Gold + Ranked Showdown",
@@ -63,6 +67,7 @@ export default function ActiveMatchesOverview() {
       playersCount: "5/10",
       matchDuration: "15 min",
       joinButtonText: "Join Match",
+      isFull: false,
     },
     {
       matchTitle: "Gold + Ranked Showdown",
@@ -74,6 +79,7 @@ export default function ActiveMatchesOverview() {
       playersCount: "5/10",
       matchDuration: "15 min",
       joinButtonText: "Join Match",
+      isFull: false,
     },
   ];
 
@@ -162,12 +168,18 @@ export default function ActiveMatchesOverview() {
             </div>
 
             <div className="w-full">
-              <Link
-                to="/dashboard/match-queue"
-                className="w-full inline-block py-4 px-[60px] text-center rounded-full text-black text-base font-medium font-orbitron bg-[linear-gradient(90deg,#FFEA00_0%,#7A34DB_100%)] hover:shadow-[0px_0px_6px_0px_rgba(122,52,219,1.00)] duration-300 cursor-pointer"
-              >
-                Join Match
-              </Link>
+              {match?.isFull ? (
+                <div className="w-full inline-block py-4 px-[60px] text-center rounded-full bg-neutral-400 text-base font-medium font-orbitron">
+                  Match Full
+                </div>
+              ) : (
+                <Link
+                  to="/dashboard/match-lobby"
+                  className="w-full inline-block py-4 px-[60px] text-center rounded-full text-black text-base font-medium font-orbitron bg-[linear-gradient(90deg,#FFEA00_0%,#7A34DB_100%)] hover:shadow-[0px_0px_6px_0px_rgba(122,52,219,1.00)] duration-300 cursor-pointer"
+                >
+                  Join Match
+                </Link>
+              )}
             </div>
           </div>
         ))}
