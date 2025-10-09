@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DepositTab from "./walletTabComponents/DepositTab";
 import WithDrawTab from "./walletTabComponents/WithDrawTab";
+import TransactionTab from "./walletTabComponents/TransactionTab";
 
 const TabData = [
   { id: 0, data: "Deposit" },
@@ -42,7 +43,7 @@ export default function WalletTab() {
 
         {activeTab === 1 && <WithDrawTab />}
 
-        {activeTab === 2 && <p>Transaction section content</p>}
+        {activeTab === 2 && <TransactionTab />}
       </div>
     </div>
   );

@@ -8,6 +8,12 @@ import DashboardHome from "../pages/Dashboard/DashboardHome";
 import DashboardWallet from "@/pages/Dashboard/DashboardWallet";
 import DashboardMatchQueue from "@/pages/Dashboard/DashboardMatchQueue";
 import DashboardCreateMatch from "@/pages/Dashboard/DashboardCreateMatch";
+import AuthLayout from "@/layouts/AuthLayout";
+import SignIn from "@/pages/Auth/SignIn";
+import SignUp from "@/pages/Auth/SignUp";
+import AuthPassword from "@/pages/Auth/AuthPassword";
+import VerifyAccountOtp from "@/pages/Auth/VerifyAccountOtp";
+import AuthVerified from "@/pages/Auth/AuthVerified";
 import DashboardMatchLobby from "@/pages/Dashboard/DashboardMatchLobby";
 import DashboardBet from "@/pages/Dashboard/DashboardBet";
 import DashboardMatchResult from "@/pages/Dashboard/DashboardMatchResult";
@@ -77,6 +83,33 @@ const Router = createBrowserRouter([
       {
         path: "match-result",
         element: <DashboardMatchResult />,
+      },
+    ],
+  },
+  // AUTH
+  {
+    path: "/auth",
+    element: <AuthLayout />,
+    children: [
+      {
+        index: true,
+        element: <SignIn />,
+      },
+      {
+        path: "sign-up",
+        element: <SignUp />,
+      },
+      {
+        path: "set-password",
+        element: <AuthPassword />,
+      },
+      {
+        path: "verify-account",
+        element: <VerifyAccountOtp />,
+      },
+      {
+        path: "verified-success",
+        element:<AuthVerified/>,
       },
     ],
   },
