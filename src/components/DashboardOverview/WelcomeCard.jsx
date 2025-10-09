@@ -46,7 +46,7 @@ export default function WelcomeCard() {
         </Link>
 
         <Link
-          to={"#"}
+          to={"/dashboard/create-match"}
           className="inline-flex items-center gap-1.5 bg-[#FFEA00] px-[18px] py-3 rounded-full text-black text-base font-medium font-orbitron hover:opacity-70 duration-300"
         >
           <span>
