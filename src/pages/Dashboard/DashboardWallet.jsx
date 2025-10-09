@@ -3,7 +3,7 @@ import WalletTab from "@/components/wallet/WalletTab";
 
 export default function DashboardWallet() {
   return (
-    <div>
+    <div className="p-8">
       <div>
         <h3 className="text-white font-exo text-[20px] leading-[30px]">
           Manage your deposits, withdrawals, and transaction history
