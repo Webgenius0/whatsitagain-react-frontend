@@ -8,7 +8,7 @@ export default function DashboardBetSumurry() {
   const [mostKilledVisibility, setMostKilledVisibility] = useState(true);
 
   return (
-    <div className="w-full">
+    <div className="w-full p-8 bg-black/30 rounded-2xl flex flex-col justify-start items-start gap-2.5">
       <div className="w-full flex items-center justify-between">
         <h3 className="text-white text-xl font-semibold font-exo">
           Bet Summery

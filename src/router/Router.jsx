@@ -10,6 +10,7 @@ import DashboardMatchQueue from "@/pages/Dashboard/DashboardMatchQueue";
 import DashboardCreateMatch from "@/pages/Dashboard/DashboardCreateMatch";
 import DashboardMatchLobby from "@/pages/Dashboard/DashboardMatchLobby";
 import DashboardBet from "@/pages/Dashboard/DashboardBet";
+import DashboardMatchResult from "@/pages/Dashboard/DashboardMatchResult";
 
 const Router = createBrowserRouter([
   // Error Route
@@ -72,6 +73,10 @@ const Router = createBrowserRouter([
       {
         path: "bet",
         element: <DashboardBet />,
+      },
+      {
+        path: "match-result",
+        element: <DashboardMatchResult />,
       },
     ],
   },

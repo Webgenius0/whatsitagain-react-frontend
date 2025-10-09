@@ -57,7 +57,7 @@ export default function DashboardBet() {
         </div>
 
         {/* Right Part */}
-        <div className="sticky top-0 w-3/12 p-8 bg-black/30 rounded-2xl flex flex-col justify-start items-start gap-2.5">
+        <div className="sticky top-0 w-3/12">
           <DashboardBetSumurry />
         </div>
       </div>
