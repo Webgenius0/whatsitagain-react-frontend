@@ -22,6 +22,22 @@ const AllPages = () => {
       name: "Verified Success Page",
       link: "/auth/verified-success",
     },
+    {
+      name: "Forget Password Page",
+      link: "/auth/forget-password",
+    },
+    {
+      name: "Forget Password OTP Page",
+      link: "/auth/forget-password-otp",
+    },
+    {
+      name: "Reset Password Page",
+      link: "/auth/reset-password",
+    },
+    {
+      name: "Password Change Success Page",
+      link: "/auth/password-change-success",
+    },
     // {
     //   name: "",
     //   link: "#",
