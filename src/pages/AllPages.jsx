@@ -58,6 +58,57 @@ const AllPages = () => {
       name: "Dashboard Match Queue Page",
       link: "/dashboard/match-queue",
     },
+      name: "Forget Password Page",
+      link: "/auth/forget-password",
+    },
+    {
+      name: "Forget Password OTP Page",
+      link: "/auth/forget-password-otp",
+    },
+    {
+      name: "Reset Password Page",
+      link: "/auth/reset-password",
+    },
+    {
+      name: "Password Change Success Page",
+      link: "/auth/password-change-success",
+    },
+    // {
+    //   name: "",
+    //   link: "#",
+    // },
+    // {
+    //   name: "",
+    //   link: "#",
+    // },
+    // {
+    //   name: "Dashboard Overview Page",
+    //   link: "/dashboard",
+    // },
+    // {
+    //   name: "Dashboard Wallet Page",
+    //   link: "/dashboard/wallet",
+    // },
+    // {
+    //   name: "Dashboard Create Match Page",
+    //   link: "/dashboard/create-match",
+    // },
+    // {
+    //   name: "Dashboard Match Lobby Page",
+    //   link: "/dashboard/match-lobby",
+    // },
+    // {
+    //   name: "Dashboard Bet Page",
+    //   link: "/dashboard/bet",
+    // },
+    // {
+    //   name: "Dashboard Match Result Page",
+    //   link: "/dashboard/match-result",
+    // },
+    // {
+    //   name: "Dashboard Match Queue Page",
+    //   link: "/dashboard/match-queue",
+    // },
   ];
 
   return (

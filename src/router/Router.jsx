@@ -18,6 +18,10 @@ import DashboardMatchLobby from "@/pages/Dashboard/DashboardMatchLobby";
 import DashboardBet from "@/pages/Dashboard/DashboardBet";
 import DashboardMatchResult from "@/pages/Dashboard/DashboardMatchResult";
 import AllPages from "@/pages/AllPages";
+import ForgetPassword from "@/pages/Auth/ForgetPassword";
+import ForgetPassWordOtp from "@/pages/Auth/ForgetPassWordOtp";
+import ResetPassword from "@/pages/Auth/ResetPassword";
+import PasswordChangeSeccessPage from "@/pages/Auth/PasswordChangeSeccessPage";
 
 const Router = createBrowserRouter([
   // Error Route
@@ -115,6 +119,22 @@ const Router = createBrowserRouter([
       {
         path: "verified-success",
         element: <AuthVerified />,
+      },
+      {
+        path: "forget-password",
+        element: <ForgetPassword />,
+      },
+      {
+        path: "forget-password-otp",
+        element: <ForgetPassWordOtp />,
+      },
+      {
+        path: "reset-password",
+        element: <ResetPassword />,
+      },
+      {
+        path: "password-change-success",
+        element: <PasswordChangeSeccessPage />,
       },
     ],
   },
