@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 
 export default function AuthVerified() {
@@ -67,9 +68,11 @@ export default function AuthVerified() {
         </div>
 
         <div className="mt-[32px] w-full">
-          <Link
-            to="/dashboard"
-            className="CustomColourAuthB w-full flex justify-center py-4 text-[#000] font-orbitron font-bold leading-6 items-center gap-2"
+          <button
+            onClick={() => toast("Dashboard Page is comming")}
+            type="button"
+            // to="/dashboard"
+            className="CustomColourAuthB w-full flex justify-center py-4 text-[#000] font-orbitron font-bold leading-6 items-center gap-2 cursor-pointer"
           >
             Go to Dashboard
             <div>
@@ -95,7 +98,7 @@ export default function AuthVerified() {
                 />
               </svg>
             </div>
-          </Link>
+          </button>
         </div>
       </div>
     </section>

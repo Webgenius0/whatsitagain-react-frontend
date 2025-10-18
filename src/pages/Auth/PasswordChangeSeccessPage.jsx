@@ -1,4 +1,6 @@
+import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
+
 export default function PasswordChangeSeccessPage() {
   return (
     <section className="p-[64px] h-auto max-h-[80vh] w-max customSignUpBg mx-auto overflow-y-scroll custom-scrollbar">
@@ -61,14 +63,17 @@ export default function PasswordChangeSeccessPage() {
             Password Changed Successfully
           </h3>
           <p className="text-[#FFF] text-[20px] font-exo font-medium leading-[30px] text-center">
-            You're all set! Your password has been updated welcome back securely.
+            You're all set! Your password has been updated welcome back
+            securely.
           </p>
         </div>
 
         <div className="mt-[32px] w-full">
-          <Link
-            to="/dashboard"
-            className="CustomColourAuthB w-full flex justify-center py-4 text-[#000] font-orbitron font-bold leading-6 items-center gap-2"
+          <button
+            onClick={() => toast("Dashboard Page is comming")}
+            type="button"
+            // to="/dashboard"
+            className="CustomColourAuthB w-full flex justify-center py-4 text-[#000] font-orbitron font-bold leading-6 items-center gap-2 cursor-pointer"
           >
             Go to Dashboard
             <div>
@@ -94,7 +99,7 @@ export default function PasswordChangeSeccessPage() {
                 />
               </svg>
             </div>
-          </Link>
+          </button>
         </div>
       </div>
     </section>

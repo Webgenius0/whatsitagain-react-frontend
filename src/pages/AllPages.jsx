@@ -38,14 +38,14 @@ const AllPages = () => {
       name: "Password Change Success Page",
       link: "/auth/password-change-success",
     },
-    {
-      name: "",
-      link: "#",
-    },
-    {
-      name: "",
-      link: "#",
-    },
+    // {
+    //   name: "",
+    //   link: "#",
+    // },
+    // {
+    //   name: "",
+    //   link: "#",
+    // },
     {
       name: "Dashboard Overview Page",
       link: "/dashboard",

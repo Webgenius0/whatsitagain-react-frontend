@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { FaRegEye } from "react-icons/fa";
+import toast from "react-hot-toast";
 
 export default function AuthPassword() {
   // States
@@ -21,9 +22,13 @@ export default function AuthPassword() {
   } = useForm();
 
   const onSubmit = (data) => {
+    toast.success("Password Set Successfully");
     console.log(data);
     reset();
-    route("/auth/verify-account");
+
+    setTimeout(() => {
+      route("/auth/verify-account");
+    }, 1000);
   };
 
   return (
@@ -116,7 +121,10 @@ export default function AuthPassword() {
                   </div>
 
                   {isPassShow ? (
-                    <div onClick={()=> setIsPassShow((prevState) => !prevState)} className="cursor-pointer">
+                    <div
+                      onClick={() => setIsPassShow((prevState) => !prevState)}
+                      className="cursor-pointer"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -131,7 +139,10 @@ export default function AuthPassword() {
                       </svg>
                     </div>
                   ) : (
-                    <div className="cursor-pointer" onClick={()=> setIsPassShow((prevState) => !prevState)}>
+                    <div
+                      className="cursor-pointer"
+                      onClick={() => setIsPassShow((prevState) => !prevState)}
+                    >
                       <FaRegEye color="white" size={20} />
                     </div>
                   )}
@@ -210,7 +221,12 @@ export default function AuthPassword() {
                   </div>
 
                   {isPassShowTwo ? (
-                    <div onClick={()=> setIsPassShowTwo((prevState) => !prevState)} className="cursor-pointer">
+                    <div
+                      onClick={() =>
+                        setIsPassShowTwo((prevState) => !prevState)
+                      }
+                      className="cursor-pointer"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -225,7 +241,12 @@ export default function AuthPassword() {
                       </svg>
                     </div>
                   ) : (
-                    <div className="cursor-pointer" onClick={()=> setIsPassShowTwo((prevState) => !prevState)}>
+                    <div
+                      className="cursor-pointer"
+                      onClick={() =>
+                        setIsPassShowTwo((prevState) => !prevState)
+                      }
+                    >
                       <FaRegEye color="white" size={20} />
                     </div>
                   )}
