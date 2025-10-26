@@ -22,6 +22,9 @@ import ForgetPassword from "@/pages/Auth/ForgetPassword";
 import ForgetPassWordOtp from "@/pages/Auth/ForgetPassWordOtp";
 import ResetPassword from "@/pages/Auth/ResetPassword";
 import PasswordChangeSeccessPage from "@/pages/Auth/PasswordChangeSeccessPage";
+import DashboardBetLedger from "@/pages/Dashboard/DashboardBetLedger";
+import DashboardReferralProgram from "@/pages/Dashboard/DashboardReferralProgram";
+import DashboardLeaderboard from "@/pages/Dashboard/DashboardLeaderboard";
 
 const Router = createBrowserRouter([
   // Error Route
@@ -59,15 +62,15 @@ const Router = createBrowserRouter([
       },
       {
         path: "bet-ledger",
-        element: <h1>Bet Ledger</h1>,
+        element: <DashboardBetLedger/>,
       },
       {
         path: "referral",
-        element: <h1>Referral</h1>,
+        element: <DashboardReferralProgram/>,
       },
       {
         path: "leaderboard",
-        element: <h1>Leaderboard</h1>,
+        element: <DashboardLeaderboard/>,
       },
       {
         path: "settings",
