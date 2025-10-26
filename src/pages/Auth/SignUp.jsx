@@ -1,6 +1,7 @@
 import Logo from "@/assets/images/logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 export default function SignUp() {
   // For Route
@@ -15,9 +16,13 @@ export default function SignUp() {
   } = useForm();
 
   const onSubmit = (data) => {
+    toast.success("Sign Up Successfully");
     console.log(data);
-    reset();
-    route('/auth/set-password')
+
+    setTimeout(() => {
+      reset();
+      route("/auth/set-password");
+    }, 1000);
   };
 
   return (
