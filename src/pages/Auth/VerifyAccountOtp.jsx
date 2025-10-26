@@ -10,10 +10,6 @@ export default function VerifyAccountOtp() {
   // For Route
   const route = useNavigate();
 
-  
-
-
- 
   return (
     <section className="p-[64px] h-auto max-h-[80vh] w-max customSignUpBg mx-auto overflow-y-scroll custom-scrollbar">
       <div className="max-w-[586px] flex flex-col items-center">

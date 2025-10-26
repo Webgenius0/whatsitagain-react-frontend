@@ -2,6 +2,8 @@ import Logo from "@/assets/images/logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import toast from "react-hot-toast";
+import { FaRegEye } from "react-icons/fa";
 
 export default function SignIn() {
   // States
@@ -19,9 +21,10 @@ export default function SignIn() {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log('LoG in',data);
+    toast.success("Login Successfully");
+    console.log(data);
     reset();
-    route("/dashboard");
+    // route("/dashboard");
   };
 
   return (
@@ -213,7 +216,12 @@ export default function SignIn() {
             </div>
 
             <div className="flex justify-end mt-2">
-              <Link to="/auth/forget-password" className="text-[#FFF] text-right font-exo text-[16px] font-medium leading-6">Forget Password?</Link>
+              <Link
+                to="/auth/forget-password"
+                className="text-[#FFF] text-right font-exo text-[16px] font-medium leading-6"
+              >
+                Forget Password?
+              </Link>
             </div>
 
             <div className="mt-[32px]">

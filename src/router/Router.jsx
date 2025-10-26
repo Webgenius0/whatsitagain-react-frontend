@@ -95,7 +95,8 @@ const Router = createBrowserRouter([
       },
     ],
   },
-  // AUTH
+
+  // AUTH Pages
   {
     path: "/auth",
     element: <AuthLayout />,
