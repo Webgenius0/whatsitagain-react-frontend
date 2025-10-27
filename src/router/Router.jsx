@@ -25,6 +25,9 @@ import PasswordChangeSeccessPage from "@/pages/Auth/PasswordChangeSeccessPage";
 import DashboardBetLedger from "@/pages/Dashboard/DashboardBetLedger";
 import DashboardReferralProgram from "@/pages/Dashboard/DashboardReferralProgram";
 import DashboardLeaderboard from "@/pages/Dashboard/DashboardLeaderboard";
+import DashboardSettings from "@/pages/Dashboard/DashboardSettings";
+import DashboardSettingsEditProfile from "@/components/DashboardSettingsPages/DashboardSettingsEditProfile";
+import DashboardSettingsChangePassword from "@/components/DashboardSettingsPages/DashboardSettingsChangePassword";
 
 const Router = createBrowserRouter([
   // Error Route
@@ -74,7 +77,15 @@ const Router = createBrowserRouter([
       },
       {
         path: "settings",
-        element: <h1>Settings</h1>,
+        element: <DashboardSettings/>,
+      },
+      {
+        path: 'settings/edit-profile',
+        element: <DashboardSettingsEditProfile/>
+      },
+      {
+        path: 'settings/password-change',
+        element: <DashboardSettingsChangePassword/>
       },
       {
         path: "match-queue",
@@ -96,6 +107,7 @@ const Router = createBrowserRouter([
         path: "match-result",
         element: <DashboardMatchResult />,
       },
+      
     ],
   },
 

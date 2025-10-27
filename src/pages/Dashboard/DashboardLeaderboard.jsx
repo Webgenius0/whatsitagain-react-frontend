@@ -14,6 +14,8 @@ import {
 } from "@tanstack/react-table";
 import React, { useState } from "react";
 
+import img from '../../assets/images/player.png'
+
 const leaderboard = [
   {
     rank: 1,
@@ -22,6 +24,7 @@ const leaderboard = [
     points: 12545,
     competition: 18,
     winrate: "87%",
+    image: img,
   },
   {
     rank: 2,
@@ -30,6 +33,7 @@ const leaderboard = [
     points: 12545,
     competition: 16,
     winrate: "85%",
+    image: img,
   },
   {
     rank: 3,
@@ -38,6 +42,7 @@ const leaderboard = [
     points: 12545,
     competition: 12,
     winrate: "83%",
+    image: img,
   },
   {
     rank: 4,
@@ -46,6 +51,7 @@ const leaderboard = [
     points: 12545,
     competition: 10,
     winrate: "82%",
+    image: img,
   },
   {
     rank: 5,
@@ -54,6 +60,7 @@ const leaderboard = [
     points: 12545,
     competition: 9,
     winrate: "80%",
+    image: img, 
   },
 ];
 
@@ -66,7 +73,18 @@ const columns = [
   {
     accessorKey: "player",
     header: "Player",
-    cell: (info) => info.getValue(),
+    cell: (info) => {
+      const {player, tier, image} = info.row.original;
+
+      return <div className="flex items-center gap-2">
+        <img src={image} alt="" />
+
+        <div>
+          <p className="font-semibold">{player}</p>
+          <p className="font-semibold text-[#FFEA00]">{tier}</p>
+        </div>
+      </div>
+    },
   },
   {
     accessorKey: "points",
