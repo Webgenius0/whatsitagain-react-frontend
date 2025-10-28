@@ -42,13 +42,13 @@ const profileSettings = [
     id: 3,
     title: "Linked Account",
     icon: <LinkedSvg />,
-    route: "/user-dashboard/user-kyc-verification",
+    route: "/dashboard/settings/linked-profile",
   },
   {
     id: 4,
     title: "Contact Support",
     icon: <InboxSvg />,
-    route: "/user-dashboard/user-referral",
+    route: "/dashboard/settings/contact-support",
   },
 ];
 
@@ -81,6 +81,7 @@ export default function DashboardSettings() {
         popup:
           "!border-2 !border-borders !rounded-lg !w-11/12 md:!w-2/3 lg:!w-1/3",
         confirmButton: "!border !border-[#3085d6] !text-primary-blue",
+        cancelButton: "!text-[#000]",
         icon: "!size-10 !p-4",
         title: "!text-2xl md:!text-2xl lg:!text-3xl",
         htmlContainer: "!text-sm md:!text-base",
@@ -91,7 +92,7 @@ export default function DashboardSettings() {
           title: "Signed Out!",
           text: "Signed In to manage the website",
           icon: "success",
-          background: "#7A34DB",
+          background: "#0000004D",
           color: "#ffffff",
           customClass: {
             popup: "!border-2 !border-borders !w-11/12 md:!w-2/3 lg:!w-1/3",
@@ -245,7 +246,7 @@ export default function DashboardSettings() {
             {/*My level option */}
             <div className="bg-[#0B1421] rounded-2xl p-4 md:p-6 lg:p-8 hover:bg-[#2A2A2A] duration-300">
               <Link
-                to={"/user-dashboard/user-level"}
+                to={"/dashboard/settings/terms-conditions"}
                 state={"userSettings"}
                 className="flex items-center justify-between "
               >

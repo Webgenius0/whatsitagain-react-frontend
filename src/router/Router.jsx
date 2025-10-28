@@ -28,6 +28,9 @@ import DashboardLeaderboard from "@/pages/Dashboard/DashboardLeaderboard";
 import DashboardSettings from "@/pages/Dashboard/DashboardSettings";
 import DashboardSettingsEditProfile from "@/components/DashboardSettingsPages/DashboardSettingsEditProfile";
 import DashboardSettingsChangePassword from "@/components/DashboardSettingsPages/DashboardSettingsChangePassword";
+import DashboardSettingsLinkedProfile from "@/components/DashboardSettingsPages/DashboardSettingsLinkedProfile";
+import DashboardSettingsContactSupport from "@/components/DashboardSettingsPages/DashboardSettingsContactSupport";
+import DashboardSettingsTerms from "@/components/DashboardSettingsPages/DashboardSettingsTerms";
 
 const Router = createBrowserRouter([
   // Error Route
@@ -86,6 +89,18 @@ const Router = createBrowserRouter([
       {
         path: 'settings/password-change',
         element: <DashboardSettingsChangePassword/>
+      },
+      {
+        path: 'settings/linked-profile',
+        element: <DashboardSettingsLinkedProfile/>
+      },
+      {
+        path: 'settings/contact-support',
+        element: <DashboardSettingsContactSupport/>
+      },
+      {
+        path: 'settings/terms-conditions',
+        element: <DashboardSettingsTerms/>
       },
       {
         path: "match-queue",

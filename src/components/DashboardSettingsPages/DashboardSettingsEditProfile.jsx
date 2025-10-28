@@ -80,10 +80,14 @@ export default function DashboardSettingsEditProfile() {
               </div>
             </div>
 
-
-            <button type="submit" className="w-full mt-12 font-bold bg-gradient-to-r from-[#FFEA00] to-[#7A34DB] hover:from-[#FFEA00] hover:to-[#FFEA00]/30  py-3 px-6 rounded-full text-black flex items-center justify-center gap-3 cursor-pointer duration-300">
-                Update
-                <p className="w-3.5 h-3.5"><ArrowUpSvg/></p>
+            <button
+              type="submit"
+              className="w-full mt-12 font-bold bg-gradient-to-r from-[#FFEA00] to-[#7A34DB] hover:from-[#FFEA00] hover:to-[#FFEA00]/30  py-3 px-6 rounded-full text-black flex items-center justify-center gap-3 cursor-pointer duration-300"
+            >
+              Update
+              <p className="w-3.5 h-3.5">
+                <ArrowUpSvg />
+              </p>
             </button>
           </form>
         </div>
