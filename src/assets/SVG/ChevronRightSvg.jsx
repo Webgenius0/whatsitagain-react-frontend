@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function ChevronRightSvg() {
+export default function ChevronRightSvg({className}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="w-full h-auto"
+      className={`w-full h-auto ${className && className}`}
       viewBox="0 0 24 24"
       fill="none"
     >

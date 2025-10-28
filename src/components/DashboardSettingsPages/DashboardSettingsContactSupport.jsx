@@ -53,7 +53,7 @@ export default function DashboardSettingsContactSupport() {
         onClick={() => navigate(-1)}
         className="py-4 px-3 rounded-full cursor-pointer hover:scale-105 duration-300 mb-5 "
       >
-        <p className="w-6 h-4">
+        <p className="w-8 h-8">
           <ChevronBackSvg />
         </p>
       </button>
@@ -118,7 +118,7 @@ export default function DashboardSettingsContactSupport() {
             className="w-full mt-8 space-y-6"
           >
             {/* name and email */}
-            <div className="w-full flex items-center gap-4">
+            <div className="w-full flex items-center gap-6">
               <div className="w-full">
                 <label>Full Name </label>
                 <div
@@ -151,8 +151,10 @@ export default function DashboardSettingsContactSupport() {
                 </div>
               </div>
             </div>
+             
 
-            <div className="w-full flex items-center gap-4">
+             {/* category and subject */}
+            <div className="w-full flex items-center gap-6">
               <div className="w-full">
                 <label>Category</label>
                 <div
@@ -205,7 +207,9 @@ export default function DashboardSettingsContactSupport() {
                 </div>
               </div>
             </div>
+             
 
+             {/* message */}
             <div className="w-full">
               <label>Message</label>
               <div

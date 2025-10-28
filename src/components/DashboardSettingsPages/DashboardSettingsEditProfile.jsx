@@ -26,7 +26,7 @@ export default function DashboardSettingsEditProfile() {
         onClick={() => navigate(-1)}
         className="py-4 px-3 rounded-full cursor-pointer hover:scale-105 duration-300 mb-5 "
       >
-        <p className="w-6 h-4">
+        <p className="w-8 h-8">
           <ChevronBackSvg />
         </p>
       </button>

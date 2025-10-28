@@ -217,12 +217,12 @@ export default function DashboardSettings() {
             {profileSettings?.map((profile, idx) => (
               <div
                 key={idx}
-                className="bg-[#0000004D] rounded-2xl p-4 md:p-6 lg:p-8 hover:bg-[#2A2A2A] duration-300"
+                className=""
               >
                 <Link
                   to={profile?.route}
                   state={"userSettings"}
-                  className="flex items-center justify-between "
+                  className="flex items-center justify-between bg-[#0000004D] rounded-2xl p-4 md:p-6 lg:p-8 hover:bg-[#2A2A2A] duration-300"
                 >
                   <p className="flex items-center gap-4 text-sm md:text-base">
                     <p className="w-6 h-6">{profile?.icon}</p>

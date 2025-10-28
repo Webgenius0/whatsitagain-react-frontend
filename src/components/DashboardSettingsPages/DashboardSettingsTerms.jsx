@@ -88,15 +88,15 @@ export default function DashboardSettingsTerms() {
       <button
         type="button"
         onClick={() => navigate(-1)}
-        className="py-4 px-3 rounded-full cursor-pointer hover:scale-105 duration-300 mb-5 "
+        className="py-4 px-3 rounded-full cursor-pointer hover:scale-105 duration-300  "
       >
-        <p className="w-6 h-4">
+        <p className="w-8 h-8">
           <ChevronBackSvg />
         </p>
       </button>
 
       <div className="w-full h-full flex items-center justify-center">
-        <div className="w-[840px] h-auto p-8 text-white">
+        <div className="w-[840px] h-auto text-white">
           <div className="" dangerouslySetInnerHTML={{__html: htmlContent}}/>
         </div>
       </div>
