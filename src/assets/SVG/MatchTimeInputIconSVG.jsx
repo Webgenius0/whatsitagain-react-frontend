@@ -8,13 +8,13 @@ export default function MatchTimeInputIconSVG() {
       viewBox="0 0 22 22"
       fill="none"
     >
-      <circle cx="11" cy="11" r="10" stroke="#FFEA00" stroke-width="1.5" />
+      <circle cx="11" cy="11" r="10" stroke="#FFEA00" strokeWidth="1.5" />
       <path
         d="M11 7V11L13 13"
         stroke="#FFEA00"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

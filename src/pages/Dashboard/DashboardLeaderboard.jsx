@@ -14,7 +14,7 @@ import {
 } from "@tanstack/react-table";
 import React, { useState } from "react";
 
-import img from '../../assets/images/player.png'
+import img from "../../assets/images/player.png";
 
 const leaderboard = [
   {
@@ -60,7 +60,7 @@ const leaderboard = [
     points: 12545,
     competition: 9,
     winrate: "80%",
-    image: img, 
+    image: img,
   },
 ];
 
@@ -74,16 +74,18 @@ const columns = [
     accessorKey: "player",
     header: "Player",
     cell: (info) => {
-      const {player, tier, image} = info.row.original;
+      const { player, tier, image } = info.row.original;
 
-      return <div className="flex items-center gap-2">
-        <img src={image} alt="" />
+      return (
+        <div className="flex items-center gap-2">
+          <img src={image} alt="" />
 
-        <div>
-          <p className="font-semibold">{player}</p>
-          <p className="font-semibold text-[#FFEA00]">{tier}</p>
+          <div>
+            <p className="font-semibold">{player}</p>
+            <p className="font-semibold text-[#FFEA00]">{tier}</p>
+          </div>
         </div>
-      </div>
+      );
     },
   },
   {
@@ -121,6 +123,7 @@ export default function DashboardLeaderboard() {
 
   const totalPage = tableInstance.getPageCount();
   const currentPage = tableInstance.getState().pagination.pageIndex;
+  const pagePerdata = tableInstance.getRowModel()?.rows;
 
   return (
     <div className="p-8 text-white">
@@ -163,12 +166,15 @@ export default function DashboardLeaderboard() {
         {/* pagination */}
         <div className="w-full mt-6 text-white">
           {totalPage > 1 && (
-            <div className=" w-full flex items-center justify-between">
+            <div className="w-full flex items-center justify-between">
               <div>
-                <p>Showing 3 of 5 entities</p>
+                <p>
+                  Showing {pagePerdata?.length} of {leaderboard?.length || "0"}{" "}
+                  entities
+                </p>
               </div>
 
-              <div className="mt-6 w-fit border rounded-md">
+              <div className="w-fit border rounded-md">
                 <button
                   type="button"
                   onClick={() => tableInstance.previousPage()}

@@ -21,8 +21,8 @@ export default function StarSvg() {
           y2="9"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFEA00" />
-          <stop offset="1" stop-color="#7A34DB" />
+          <stop stopColor="#FFEA00" />
+          <stop offset="1" stopColor="#7A34DB" />
         </linearGradient>
       </defs>
     </svg>

@@ -149,6 +149,7 @@ export default function DashboardBetLedger() {
 
   const totalPage = tableInstance.getPageCount();
   const currentPage = tableInstance.getState().pagination.pageIndex;
+  const pagePerdata = tableInstance.getRowModel()?.rows;
 
   return (
     <div className="p-8 text-white">
@@ -189,36 +190,44 @@ export default function DashboardBetLedger() {
         </Table>
 
         {/* pagination */}
-        <div className="w-full flex items-end justify-end mt-6">
+        <div className="w-full mt-6">
           {totalPage > 1 && (
-            <div className="mt-6 w-fit border rounded-md">
-              <button
-                type="button"
-                onClick={() => tableInstance.previousPage()}
-                disabled={!tableInstance.getCanPreviousPage()}
-                className="border-r py-2 w-[130px] rounded-l-md cursor-pointer"
-              >
-                Previous
-              </button>
-              {Array.from({ length: totalPage }).map((_, idx) => (
-                <span
-                  key={idx}
-                  className={`border-x py-2.5 px-4 ${
-                    currentPage == idx &&
-                    "bg-black text-white border"
-                  }`}
+            <div className="flex items-end justify-between">
+              <div>
+                <p>
+                  Showing {pagePerdata?.length} of {matches?.length || "0"}{" "}
+                  entities
+                </p>
+              </div>
+
+              <div className=" w-fit border rounded-md">
+                <button
+                  type="button"
+                  onClick={() => tableInstance.previousPage()}
+                  disabled={!tableInstance.getCanPreviousPage()}
+                  className="border-r py-2 w-[130px] rounded-l-md cursor-pointer"
                 >
-                  {idx + 1}
-                </span>
-              ))}
-              <button
-                type="button"
-                onClick={() => tableInstance.nextPage()}
-                disabled={!tableInstance.getCanNextPage()}
-                className="border-l py-2 w-[130px] rounded-r-md cursor-pointer"
-              >
-                Next
-              </button>
+                  Previous
+                </button>
+                {Array.from({ length: totalPage }).map((_, idx) => (
+                  <span
+                    key={idx}
+                    className={`border-x py-2.5 px-4 ${
+                      currentPage == idx && "bg-black text-white border"
+                    }`}
+                  >
+                    {idx + 1}
+                  </span>
+                ))}
+                <button
+                  type="button"
+                  onClick={() => tableInstance.nextPage()}
+                  disabled={!tableInstance.getCanNextPage()}
+                  className="border-l py-2 w-[130px] rounded-r-md cursor-pointer"
+                >
+                  Next
+                </button>
+              </div>
             </div>
           )}
         </div>

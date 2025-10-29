@@ -11,16 +11,16 @@ export default function GradientSwardIconSVG() {
       <path
         d="M6.98651 7.4922L4.67712 5.51403C3.15399 4.20384 3.14889 2.30243 2.98633 1.02051C4.65267 1.09958 5.94342 1.25045 7.06745 2.19995L8.24332 3.53586L9.51584 4.96454M18.4573 16.4191L15.4925 13.4193M13.0215 16.4191C13.0441 16.1469 13.2223 15.4411 14.0408 14.6848C14.7751 14.0064 16.3676 12.3804 17.0832 11.6753C17.4886 11.2759 18.1532 10.9956 18.4573 10.9962M14.5683 10.809L15.9049 12.2879M12.6763 12.4373L14.1705 13.7509M19.4616 15.9813C20.292 15.9828 21.0011 16.5962 20.9995 17.426C20.9979 18.2559 20.292 18.9835 19.4616 18.9819C18.6312 18.9804 17.9908 18.2502 17.9924 17.4203C18.046 16.5945 18.6568 16.0923 19.4616 15.9813Z"
         stroke="url(#paint0_linear_30097_113)"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M3.59593 16.3934L6.5539 13.5011M3.56157 10.9874C3.83402 11.0095 4.59357 11.1914 5.274 12.0414C5.89872 12.8218 7.58371 14.3309 8.29062 15.0447C8.69102 15.449 8.97105 16.0895 8.97105 16.3934M6.2645 12.2302L14.5035 2.66448C15.8442 1.16836 17.7179 1.13568 19.0036 0.998413C18.8918 2.66178 18.7155 3.94847 17.7435 5.05291L7.54959 13.9267M4.00618 17.4992C4.00618 18.329 3.33301 19.0017 2.5026 19.0017C1.6722 19.0017 0.999023 18.329 0.999023 17.4992C0.999023 16.6693 1.6722 15.9966 2.5026 15.9966C3.33301 15.9966 4.00618 16.6693 4.00618 17.4992Z"
         stroke="url(#paint1_linear_30097_113)"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <defs>
         <linearGradient
@@ -31,8 +31,8 @@ export default function GradientSwardIconSVG() {
           y2="10.0012"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFEA00" />
-          <stop offset="1" stop-color="#7A34DB" />
+          <stop stopColor="#FFEA00" />
+          <stop offset="1" stopColor="#7A34DB" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_30097_113"
@@ -42,8 +42,8 @@ export default function GradientSwardIconSVG() {
           y2="10.0001"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFEA00" />
-          <stop offset="1" stop-color="#7A34DB" />
+          <stop stopColor="#FFEA00" />
+          <stop offset="1" stopColor="#7A34DB" />
         </linearGradient>
       </defs>
     </svg>

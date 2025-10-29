@@ -11,10 +11,10 @@ export default function ChevronRightSvg({className}) {
       <path
         d="M8.90625 19.9201L15.4263 13.4001C16.1963 12.6301 16.1963 11.3701 15.4263 10.6001L8.90625 4.08008"
         stroke="url(#paint0_linear_29971_972)"
-        stroke-width="1.5"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <defs>
         <linearGradient
@@ -25,8 +25,8 @@ export default function ChevronRightSvg({className}) {
           y2="12.0001"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFEA00" />
-          <stop offset="1" stop-color="#7A34DB" />
+          <stop stopColor="#FFEA00" />
+          <stop offset="1" stopColor="#7A34DB" />
         </linearGradient>
       </defs>
     </svg>

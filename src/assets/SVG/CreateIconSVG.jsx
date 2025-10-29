@@ -12,11 +12,11 @@ export default function CreateIconSVG() {
       <path
         d="M11.5 7.5V15.5M15.5 11.5H7.5"
         stroke="black"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
-      <circle cx="11.5" cy="11.5" r="10" stroke="black" stroke-width="1.5" />
+      <circle cx="11.5" cy="11.5" r="10" stroke="black" strokeWidth="1.5" />
     </svg>
   );
 }

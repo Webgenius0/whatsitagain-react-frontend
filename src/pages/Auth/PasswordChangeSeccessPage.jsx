@@ -37,7 +37,7 @@ export default function PasswordChangeSeccessPage() {
                 y2="98.9732"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#FFEA00" />
+                <stop stopColor="#FFEA00" />
                 <stop offset="1" stopColor="#7A34DB" />
               </linearGradient>
               <linearGradient

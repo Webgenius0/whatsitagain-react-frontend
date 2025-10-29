@@ -29,7 +29,7 @@ const profileSettings = [
   {
     id: 1,
     title: "Edit Profile Information",
-    icon: <UserSvg />, 
+    icon: <UserSvg />,
     route: "/dashboard/settings/edit-profile",
   },
   {
@@ -199,7 +199,9 @@ export default function DashboardSettings() {
                 <span className="text-[#32CD32]">{user?.accountStatus}</span>
               </p>
 
-              <p >Member Since: <span>{user?.joinDate}</span></p>
+              <p>
+                Member Since: <span>{user?.joinDate}</span>
+              </p>
             </div>
           </div>
         </div>
@@ -215,19 +217,16 @@ export default function DashboardSettings() {
 
           <div className="space-y-8">
             {profileSettings?.map((profile, idx) => (
-              <div
-                key={idx}
-                className=""
-              >
+              <div key={idx} className="">
                 <Link
                   to={profile?.route}
                   state={"userSettings"}
                   className="flex items-center justify-between bg-[#0000004D] rounded-2xl p-4 md:p-6 lg:p-8 hover:bg-[#2A2A2A] duration-300"
                 >
-                  <p className="flex items-center gap-4 text-sm md:text-base">
+                  <div className="flex items-center gap-4 text-sm md:text-base">
                     <p className="w-6 h-6">{profile?.icon}</p>
                     <p>{profile?.title}</p>
-                  </p>
+                  </div>
 
                   <p className="w-5 h-5 md:w-6 md:h-6">
                     <ChevronRightSvg />
@@ -250,12 +249,12 @@ export default function DashboardSettings() {
                 state={"userSettings"}
                 className="flex items-center justify-between "
               >
-                <p className="flex items-center gap-4 text-sm md:text-base">
+                <div className="flex items-center gap-4 text-sm md:text-base">
                   <p className="w-6 h-6">
                     <TermsConditionsSvg />
                   </p>
                   <p>Terms And Conditions</p>
-                </p>
+                </div>
 
                 <p className="w-5 h-5 md:w-6 md:h-6">
                   <ChevronRightSvg />
@@ -270,12 +269,12 @@ export default function DashboardSettings() {
                 onClick={handleLogout}
                 className="w-full flex items-center justify-between cursor-pointer"
               >
-                <p className="flex items-center gap-4">
+                <div className="flex items-center gap-4">
                   <p className="w-6 h-6">
                     <LogoutSvg />
                   </p>
                   <p>Log Out</p>
-                </p>
+                </div>
 
                 <p className="w-6 h-6">
                   <ChevronRightSvg />
@@ -285,25 +284,22 @@ export default function DashboardSettings() {
 
             {/* delete option */}
             <div className="bg-[#0B1421] text-sm md:text-base rounded-2xl p-4 md:py-4 md:px-6 lg:py-6 lg:px-8 hover:bg-[#2A2A2A] duration-300">
-              <buton
+              <button
                 type="button"
                 onClick={handleDelete}
-                className="flex items-center justify-between cursor-pointer"
+                className="w-full flex items-center justify-between cursor-pointer"
               >
-                <p className="flex items-center gap-4">
+                <div className="flex items-center gap-4">
                   <p className="w-6 h-6">
                     <DeleteSvg />
                   </p>
                   <p>Delete Account</p>
-                </p>
+                </div>
 
-                <button
-                  type="button"
-                  className="bg-[#D10028] rounded-full py-2.5 px-6 cursor-pointer hover:bg-red-700 duration-300 ease-in-out"
-                >
+                <p className="bg-[#D10028] rounded-full py-2.5 px-6 cursor-pointer hover:bg-red-700 duration-300 ease-in-out">
                   Delete
-                </button>
-              </buton>
+                </p>
+              </button>
             </div>
           </div>
         </div>

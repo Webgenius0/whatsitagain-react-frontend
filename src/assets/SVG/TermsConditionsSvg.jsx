@@ -29,8 +29,8 @@ export default function TermsConditionsSvg() {
           y2="5"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFEA00" />
-          <stop offset="1" stop-color="#7A34DB" />
+          <stop stopColor="#FFEA00" />
+          <stop offset="1" stopColor="#7A34DB" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_30191_610"
@@ -40,8 +40,8 @@ export default function TermsConditionsSvg() {
           y2="12"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFEA00" />
-          <stop offset="1" stop-color="#7A34DB" />
+          <stop stopColor="#FFEA00" />
+          <stop offset="1" stopColor="#7A34DB" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_30191_610"
@@ -51,8 +51,8 @@ export default function TermsConditionsSvg() {
           y2="19"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFEA00" />
-          <stop offset="1" stop-color="#7A34DB" />
+          <stop stopColor="#FFEA00" />
+          <stop offset="1" stopColor="#7A34DB" />
         </linearGradient>
       </defs>
     </svg>

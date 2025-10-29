@@ -25,8 +25,8 @@ export default function ChevronBackSvg() {
           y2="25.3332"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFEA00" />
-          <stop offset="1" stop-color="#7A34DB" />
+          <stop stopColor="#FFEA00" />
+          <stop offset="1" stopColor="#7A34DB" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_29971_1151"
@@ -36,8 +36,8 @@ export default function ChevronBackSvg() {
           y2="25.3335"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFEA00" />
-          <stop offset="1" stop-color="#7A34DB" />
+          <stop stopColor="#FFEA00" />
+          <stop offset="1" stopColor="#7A34DB" />
         </linearGradient>
       </defs>
     </svg>

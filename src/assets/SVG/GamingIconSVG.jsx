@@ -22,8 +22,8 @@ export default function GamingIconSVG() {
           y2="16"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#7F00FF" />
-          <stop offset="1" stop-color="#E100FF" />
+          <stop stopColor="#7F00FF" />
+          <stop offset="1" stopColor="#E100FF" />
         </linearGradient>
       </defs>
     </svg>
