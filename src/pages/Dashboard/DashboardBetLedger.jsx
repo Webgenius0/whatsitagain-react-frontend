@@ -65,6 +65,26 @@ const matches = [
     status: "Completed",
     color: "green",
   },
+  {
+    date: "Aug 15, 2025",
+    match: "Gold Ranked Showdown",
+    market: "Match Winner - Team Alpha",
+    stake: 30,
+    odds: 2.5,
+    profitLoss: -15,
+    status: "Lost",
+    color: "red",
+  },
+  {
+    date: "Aug 16, 2025",
+    match: "Gold Ranked Showdown",
+    market: "Match Winner - Team Alpha",
+    stake: 25,
+    odds: 1.8,
+    profitLoss: 20,
+    status: "Completed",
+    color: "green",
+  },
 ];
 
 const columns = [
@@ -134,7 +154,7 @@ const columns = [
 export default function DashboardBetLedger() {
   const [pagination, setPagination] = useState({
     pageIndex: 0,
-    pageSize: 3,
+    pageSize: 5,
   });
   const tableInstance = useReactTable({
     columns,
@@ -200,30 +220,30 @@ export default function DashboardBetLedger() {
                 </p>
               </div>
 
-              <div className=" w-fit border rounded-md">
+              <div className="border rounded-md flex items-center">
                 <button
                   type="button"
                   onClick={() => tableInstance.previousPage()}
                   disabled={!tableInstance.getCanPreviousPage()}
-                  className="border-r py-2 w-[130px] rounded-l-md cursor-pointer"
+                  className=" py-2 w-[130px] cursor-pointer"
                 >
                   Previous
                 </button>
                 {Array.from({ length: totalPage }).map((_, idx) => (
-                  <span
+                  <p
                     key={idx}
-                    className={`border-x py-2.5 px-4 ${
-                      currentPage == idx && "bg-black text-white border"
+                    className={`py-2 px-4 border-x ${
+                      currentPage == idx && "bg-black text-white border-white"
                     }`}
                   >
                     {idx + 1}
-                  </span>
+                  </p>
                 ))}
                 <button
                   type="button"
                   onClick={() => tableInstance.nextPage()}
                   disabled={!tableInstance.getCanNextPage()}
-                  className="border-l py-2 w-[130px] rounded-r-md cursor-pointer"
+                  className="py-2 w-[130px] cursor-pointer"
                 >
                   Next
                 </button>

@@ -62,6 +62,24 @@ const leaderboard = [
     winrate: "80%",
     image: img,
   },
+  {
+    rank: 6,
+    player: "ProGamer",
+    tier: "Diamond II",
+    points: 12545,
+    competition: 10,
+    winrate: "82%",
+    image: img,
+  },
+  {
+    rank: 7,
+    player: "ProGamer",
+    tier: "Diamond II",
+    points: 12545,
+    competition: 9,
+    winrate: "80%",
+    image: img,
+  },
 ];
 
 const columns = [
@@ -108,7 +126,7 @@ const columns = [
 export default function DashboardLeaderboard() {
   const [pagination, setPagination] = useState({
     pageIndex: 0,
-    pageSize: 3,
+    pageSize: 5,
   });
   const tableInstance = useReactTable({
     columns,
@@ -174,30 +192,30 @@ export default function DashboardLeaderboard() {
                 </p>
               </div>
 
-              <div className="w-fit border rounded-md">
+              <div className="border rounded-md flex items-center">
                 <button
                   type="button"
                   onClick={() => tableInstance.previousPage()}
                   disabled={!tableInstance.getCanPreviousPage()}
-                  className="border-r py-2 w-[130px] rounded-l-md cursor-pointer"
+                  className=" py-2 w-[130px] cursor-pointer"
                 >
                   Previous
                 </button>
                 {Array.from({ length: totalPage }).map((_, idx) => (
-                  <span
+                  <p
                     key={idx}
-                    className={`border-x py-2.5 px-4 ${
-                      currentPage == idx && "bg-black text-white border"
+                    className={`py-2 px-4 border-x ${
+                      currentPage == idx && "bg-black text-white border-white"
                     }`}
                   >
                     {idx + 1}
-                  </span>
+                  </p>
                 ))}
                 <button
                   type="button"
                   onClick={() => tableInstance.nextPage()}
                   disabled={!tableInstance.getCanNextPage()}
-                  className="border-l py-2 w-[130px] rounded-r-md cursor-pointer"
+                  className="py-2 w-[130px] cursor-pointer"
                 >
                   Next
                 </button>
